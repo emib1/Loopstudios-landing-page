@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Alata', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: url("/images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    height: 80%;
+    width: 100%;
+    color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid;
+}
+    
+
+
+.header-h1 {
+    color: white;
+    border: 2px solid;
+    padding: 2rem;
+    width: 38%;
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/******* monile nav*******/
+.mobile-nav {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: left;
+    transition: all 0.4s ease-in;
+    display: none;
+  }
+  
+  
+  .close {
+    display: none;
+    transition: all 0.4s ease;
+    cursor:pointer;
+  }
+  
+  .open {
+    display: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .mobile-nav ul {
+    margin: 8rem 1rem;
+    display: block;
+  }
+  
+  .mobile-nav ul li {
+    margin: 1.5rem;
+    color: white;
+    opacity: 0.7;
+    transition: all 0.4s ease-in;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+
+
+  @media  screen and (max-width:650px) {
+    header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     
+    }
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .open {
+        display: block;
+        /* margin: 0rem 2.5rem; */
+      }
+
+    .logo{
+        z-index: 2;
+        margin: 0rem 2rem;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+    .header-h1 {
+        color: white;
+        border: 2px solid;
+        /* padding: 2rem; */
+        width: 55%;
+        margin-bottom:2rem ;
+        align-self: center;
+  }
+  .close{
+    z-index: 2;
+    display: visible;
+    margin-right: 2.5rem;
+
+  }
+  .mar{
+    margin-bottom: 2rem;
+  }
+  }
+/********** section1*************/
+
+main{
+    background-color: white;
+    margin:0 3rem;
+  
+}
+
+.section1{
+    display: flex;
+    /* justify-content: center; */
+    position: relative;
+    /* height: 100vh; */
+    max-width: 1050px;
+    margin: 2.5rem auto;
+}
+
+.section1 img{
+    position: relative;
+    max-width: 650px;
+}
+.section1-text{
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    transform: translateX(75%);
+    width: 50%;
+    top:45%;
+    margin-bottom: 1rem;
+
+}
+
+.section1-text h2{
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+.section1-text p{
+    margin-bottom: 1.5rem;
+    color: hsl(0, 0%, 55%);
+}
+
+
+@media screen and (max-width:750px){
+    .section1 img{
+        max-width: 570px;
+    }
+    .section1-text{
+        top: 10%;
+        width: 40%;
+        transform: translateX(120%);
+    }
+}
+
+
+@media screen and (max-width:650px){
+
+    .section1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 2rem;
+    }
+    .section1-text{
+        position: relative;
+        transform: translateX(0%);
+        width: 100%;
+        z-index: 0;
+        margin-top: 1rem;
+        padding: 0;
+    }
+}
+
+
+/*********** section2 ************/
+.section2{
+    max-width: 1050px;
+    margin: auto;
+}
+
+.section2-text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem ;
+    margin-top: 5rem;
+    z-index: 2;
+}
+
+.section2-text h2, .section1-text h2{
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.section2-text button{
+    border: 2px solid black;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.section2-text button:hover{
+    background-color: black;
+    color: white;
+}
+
+.section2-images-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.grid-item img{
+    width: 100%;
+    /* position: relative; */
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item h3{
+  position:absolute;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  top: 80%;
+  left: 12px;
+  letter-spacing: 2px;
+}
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    .grid-item h3{
+        top: 75%;
+        font-size: 21px;
+      }
+}
+
+@media screen and (max-width:650px){
+
+    .mobile{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+    .section2{
+        margin: 2rem;
+        height: 70%;
+    }
+    
+    .section2-images-grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(8, 1fr);
+    
+       
+    }
+
+}
+
+/*********** footer************/
+
+footer{
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+}
+
+footer ul li{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.right-footer ul{
+    margin-top: 0.5rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left ul{
+    margin-bottom: 1rem;
+}
+.left p{
+    color:hsl(0, 0%, 55%);
+}
+
+footer ul li:hover {
+    border-bottom: 2px solid;
+}
+
+@media screen  and (max-width:650px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .right-footer ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .left ul {
+        justify-content: center;
+    }
+    footer ul li{
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+    footer ul li:hover {
+        border: none;
+    }
+}
